@@ -1,15 +1,18 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 
+import { Background } from '../components/background';
 import { DefaultLayout } from '../layouts/default-layout';
 
 const Index: React.FC = () => (
   <DefaultLayout>
-    <section style={{background: 'url(bg-masthead.jpg)', backgroundPosition: '50% 50%', backgroundSize: 'cover' }}>
-      <Container>
-        <div style={{height: 1200}}/>
-      </Container>
-    </section>
+    <Background image="bgMasthead">
+      <section>
+        <Container>
+          <div style={{ height: 1200 }} />
+        </Container>
+      </section>
+    </Background>
   </DefaultLayout>
 );
 
