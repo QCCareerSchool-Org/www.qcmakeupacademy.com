@@ -1,22 +1,35 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "www-qcmakeupacademy-com",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "QC Makeup Academy website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Dave Welsh <dave@qccareerschool.com>",
   "dependencies": {
+    "@types/react-helmet": "^5.0.11",
+    "bootstrap": "^4.3.1",
     "gatsby": "^2.15.29",
     "gatsby-image": "^2.2.24",
     "gatsby-plugin-manifest": "^2.2.20",
     "gatsby-plugin-offline": "^3.0.11",
     "gatsby-plugin-react-helmet": "^3.1.10",
+    "gatsby-plugin-sass": "^2.1.17",
     "gatsby-plugin-sharp": "^2.2.28",
+    "gatsby-plugin-tslint": "0.0.2",
+    "gatsby-plugin-typescript": "^2.1.11",
     "gatsby-source-filesystem": "^2.1.29",
+    "gatsby-source-wordpress": "^3.1.39",
     "gatsby-transformer-sharp": "^2.2.20",
+    "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
+    "react-bootstrap": "^1.0.0-beta.14",
     "react-dom": "^16.10.2",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-icons": "^3.7.0",
+    "tslint": "^5.20.0",
+    "tslint-loader": "^3.5.4",
+    "tslint-react": "^4.1.0",
+    "typescript": "^3.6.3"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
@@ -24,7 +37,7 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
+  "license": "UNLICENSED",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
