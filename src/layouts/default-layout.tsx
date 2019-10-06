@@ -7,12 +7,13 @@ import React from 'react';
 
 import { Footer } from '../components/footer';
 import { Header } from '../components/header';
+import { SecondLevelNav } from '../components/second-level-nav';
 import { Index } from './index';
 
 export const DefaultLayout: React.FC = ({ children }) => (
   <Index>
     <div className="d-flex flex-column vh-100">
-      <Header className="flex-shrink-0" />
+      <Header className="flex-shrink-0 fixed-top" />
       <main className="flex-shrink-0">
         {children}
       </main>

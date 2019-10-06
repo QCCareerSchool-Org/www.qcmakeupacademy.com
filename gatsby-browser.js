@@ -5,13 +5,16 @@
  */
 import React from 'react';
 
-import { ScreenWidthProvider } from './src/contexts/screen-width';
-import { ScrollPositionProvider } from './src/contexts/scroll-position';
+import { ScreenWidthProvider } from './src/providers/screen-width';
+import { ScrollPositionProvider } from './src/providers/scroll-position';
+import { CountryCodeProvider } from './src/providers/country-code';
 
 export const wrapRootElement = ({ element }) => (
   <ScreenWidthProvider>
     <ScrollPositionProvider>
-      {element}
+      <CountryCodeProvider>
+        {element}
+      </CountryCodeProvider>
     </ScrollPositionProvider>
   </ScreenWidthProvider>
 );

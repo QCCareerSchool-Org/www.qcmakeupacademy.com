@@ -11,8 +11,8 @@ import { FaBeer } from 'react-icons/fa';
 import { Background } from '../components/background';
 import { PreparedQuote } from '../components/prepared-quote';
 import { SEO } from '../components/seo';
-import { ScreenWidthContext } from '../contexts/screen-width';
 import { DefaultLayout } from '../layouts/default-layout';
+import { ScreenWidthContext } from '../providers/screen-width';
 
 import BlackParalax from '../images/Black-Paralax.svg';
 

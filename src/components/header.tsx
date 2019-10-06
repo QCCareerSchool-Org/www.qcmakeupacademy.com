@@ -8,8 +8,8 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import logoDark from '../images/qcma-logo-nav-dark.svg';
 import logoLight from '../images/qcma-logo-nav-light.svg';
 
-import { ScreenWidthContext } from '../contexts/screen-width';
-import { ScrollPositionContext } from '../contexts/scroll-position';
+import { ScreenWidthContext } from '../providers/screen-width';
+import { ScrollPositionContext } from '../providers/scroll-position';
 
 interface Props {
   className?: string;
@@ -29,9 +29,8 @@ export const Header: React.FC<Props> = ({ className }) => {
       id="main-nav"
       bg={scrollPosition > 90 ? 'light' : undefined}
       variant={scrollPosition > 90 ? undefined : 'dark'}
-      fixed="top"
       expand="lg"
-      className={`flex-shrink-0 ${mobileMenu && mobile ? 'opened' : 'closed'} ${className}`}
+      className={`${mobileMenu && mobile ? 'opened' : 'closed'} ${className}`}
     >
       {/* <Container> */}
         <Navbar.Brand href="/">
