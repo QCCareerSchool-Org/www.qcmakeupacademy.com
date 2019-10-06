@@ -45,3 +45,10 @@ ul.sm-indent, ol.sm-indent { padding-inline-start: 0rem; padding-left: 1.5rem; }
 .navbar-dark.opened {
   background-color: rgba(0, 0, 0, 0.8)
 }
+
+@media (max-width: 575px) {
+  .display-1 { font-size: 6rem }
+  .display-2 { font-size: 5rem }
+  .display-3 { font-size: 4rem }
+  .display-4 { font-size: 3rem }
+}

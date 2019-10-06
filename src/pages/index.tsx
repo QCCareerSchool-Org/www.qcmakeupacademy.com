@@ -22,7 +22,7 @@ const Index: React.FC = () => {
     tileHeight = 210;
   }
 
-  const backgroundStyle: React.CSSProperties = screenWidth >= 992 ? { backgroundPosition: '100% 50%' } : { backgroundPosition: '80% 50%' };
+  const backgroundStyle: React.CSSProperties = screenWidth >= 992 ? { backgroundPosition: '100% 50%' } : { backgroundPosition: '90% 50%' };
 
   return (
     <DefaultLayout>
@@ -42,9 +42,21 @@ const Index: React.FC = () => {
       <section>
         <Container>
           <Row className="text-center">
-            <Col sm="12" md="4" className="lead"><FaBeer size="40" className="text-primary mb-2" /><br />Earn a certificate from the world’s leading online makeup school</Col>
-            <Col sm="12" md="4" className="lead"><FaBeer size="40" className="text-primary mb-2" /><br />Get hands-on training from celebrity makeup artists</Col>
-            <Col sm="12" md="4" className="lead"><FaBeer size="40" className="text-primary mb-2" /><br />Start your dream career as a professional makeup artist!</Col>
+            <Col sm="12" md="4" className="lead mb-5 mb-md-0">
+              <FaBeer size="40" className="text-primary mb-2" />
+              <br />
+              Earn a certificate from the world’s leading online makeup school
+            </Col>
+            <Col sm="12" md="4" className="lead mb-5 mb-md-0">
+              <FaBeer size="40" className="text-primary mb-2" />
+              <br />
+              Get hands-on training from celebrity makeup artists
+            </Col>
+            <Col sm="12" md="4" className="lead">
+              <FaBeer size="40" className="text-primary mb-2" />
+              <br />
+              Start your dream career as a professional makeup artist!
+            </Col>
           </Row>
         </Container>
       </section>
