@@ -22,14 +22,16 @@ const Index: React.FC = () => {
     tileHeight = 210;
   }
 
+  const backgroundStyle: React.CSSProperties = screenWidth >= 992 ? { backgroundPosition: '50% 50%' } : { backgroundPosition: '100% 50%' };
+
   return (
     <DefaultLayout>
-      <Background image="headerImage1" className="bg-dark text-light">
+      <Background image="headerImage1" style={backgroundStyle} className="bg-dark text-light">
         <section>
           <Container style={{ height: 400 }}>
             <Row className="h-100">
               <Col className="align-self-center text-center">
-                <h1 className="display-4 mb-4">Become a Professional<br />Makeup Artist</h1>
+                <h1 className="display-4 mb-4 text-shadow">Become a Professional<br />Makeup Artist</h1>
                 <Button size="lg" style={{ letterSpacing: 2 }}>WATCH THE VIDEO</Button>
               </Col>
             </Row>
@@ -51,13 +53,13 @@ const Index: React.FC = () => {
         <Container className="text-center">
           <h2 className="h1">QC Makeup Academy Courses</h2>
           <p className="lead">Choose from a variety of courses&mdash;unmatched by any other makeup school!</p>
-          <p className="mb-5"><Link to="/online-makeup-courses/"><Button>VIEW ALL COURSES</Button></Link></p>
+          <p className="mb-5"><Link to="/online-makeup-courses/"><Button style={{ letterSpacing: 1 }}>VIEW ALL COURSES</Button></Link></p>
           <Row>
             <Col xs="12" md="4" className="mb-4 mb-md-0">
               <Background image="courses1" overlay={[ `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))` ]}>
                 <div style={{ height: tileHeight }} className="d-flex flex-column justify-content-center">
                   <h3 className="text-shadow mb-3">Foundational<br />Training</h3>
-                  <Button color="black" className="d-block align-self-center">VIEW COURSES</Button>
+                  <Button color="black" className="d-block align-self-center" style={{ letterSpacing: 1 }}>VIEW COURSES</Button>
                 </div>
               </Background>
             </Col>
@@ -65,7 +67,7 @@ const Index: React.FC = () => {
               <Background image="courses3" overlay={[ `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))` ]}>
                 <div style={{ height: tileHeight }} className="d-flex flex-column justify-content-center">
                   <h3 className="text-shadow mb-3">Advanced<br />Training</h3>
-                  <Button color="black" className="d-block align-self-center">VIEW COURSES</Button>
+                  <Button color="black" className="d-block align-self-center" style={{ letterSpacing: 1 }}>VIEW COURSES</Button>
                 </div>
               </Background>
             </Col>
@@ -73,7 +75,7 @@ const Index: React.FC = () => {
               <Background image="courses2" overlay={[ `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))` ]}>
                 <div style={{ height: tileHeight }} className="d-flex flex-column justify-content-center">
                   <h3 className="text-shadow mb-3">Specialty<br />Training</h3>
-                  <Button color="black" className="d-block align-self-center">VIEW COURSES</Button>
+                  <Button color="black" className="d-block align-self-center" style={{ letterSpacing: 1 }}>VIEW COURSES</Button>
                 </div>
               </Background>
             </Col>
