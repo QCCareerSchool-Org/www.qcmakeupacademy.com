@@ -10,6 +10,7 @@
     "interface-name": false,
     "jsx-no-multiline-js": false,
     "jsx-no-lambda": false,
+    "jsx-space-before-trailing-slash": true,
     "max-line-length": [true, 240],
     "no-submodule-imports": [true, "react-icons", "react-bootstrap"],
     "object-literal-sort-keys": false,

@@ -5,11 +5,11 @@ import Row from 'react-bootstrap/Row';
 
 import { Background } from '../components/background';
 import { DefaultLayout } from '../layouts/default-layout';
-import SEO from "../components/seo"
+import { SEO } from "../components/seo"
 
 const NotFoundPage = () => (
   <DefaultLayout>
-    <SEO title="404: Not found" />
+    <SEO title="Page Not found" />
     <Background image="headerImage1" className="bg-dark text-light">
       <section>
         <Container style={{ height: 400 }}>

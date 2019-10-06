@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `QC Makeup Academy`,
+    description: `QC Makeup Academy is the world leader in online makeup education. Become a Professional Makeup Artist with top-rated online makeup courses from QC.`,
     author: `QC Career School`,
   },
   plugins: [
