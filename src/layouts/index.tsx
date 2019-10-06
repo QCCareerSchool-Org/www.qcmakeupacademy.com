@@ -1,3 +1,7 @@
+/**
+ * This is the base layout that wraps all other layouts.
+ * It includes global styles, like bootstrap and contains the state for screen width and scroll position
+ */
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 

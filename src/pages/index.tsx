@@ -22,13 +22,19 @@ const Index: React.FC = () => {
           <Container style={{ height: 400 }}>
             <Row className="h-100">
               <Col className="align-self-center text-center">
-                <h1 className="display-4 mb-4">Become a Professional<br />Makeup Artist{screenWidth}</h1>
+                <h1 className="display-4 mb-4">Become a Professional<br />Makeup Artist</h1>
                 <Button size="lg" style={{ letterSpacing: 2 }}>WATCH THE VIDEO</Button>
               </Col>
             </Row>
           </Container>
         </section>
       </Background>
+
+      <section className="bg-primary text-light">
+        <Container>
+          <p>Screen width is {screenWidth}</p>
+        </Container>
+      </section>
 
       <section>
         <Container>
@@ -48,7 +54,7 @@ const Index: React.FC = () => {
           <Row>
             <Col xs="12" md="4" className="mb-4 mb-md-0">
               <Background image="courses1" overlay={[ `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))` ]}>
-                <div style={{ height: (mobile ? 200 : 300) }} className="d-flex flex-column justify-content-center">
+                <div style={{ height: 300 }} className="d-flex flex-column justify-content-center">
                   <h3 className="text-shadow mb-3">Foundational<br />Training</h3>
                   <Button color="black" className="d-block align-self-center">VIEW COURSES</Button>
                 </div>

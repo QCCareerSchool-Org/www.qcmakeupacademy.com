@@ -5,9 +5,9 @@ import { DefaultLayout } from '../layouts/default-layout';
 
 const OnlineMakeupCourses: React.FC = () => (
   <DefaultLayout>
-    <section style={{background: 'url(/bg-masthead.jpg)', backgroundPosition: '50% 50%', backgroundSize: 'cover' }}>
+    <section>
       <Container>
-        <div style={{height: 1200}}/>
+        <h1>Online Makeup Courses</h1>
       </Container>
     </section>
   </DefaultLayout>

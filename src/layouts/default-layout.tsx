@@ -1,3 +1,7 @@
+/**
+ * This is the layout that wraps pages
+ */
+
 import PropTypes from 'prop-types';
 import React from 'react';
 
