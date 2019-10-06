@@ -11,7 +11,7 @@ const OnlineMakeupCourses: React.FC = () => (
   <DefaultLayout>
     <Background image="makeupArtistWorkingOnModel" className="bg-dark text-light">
       <section>
-        <Container style={{ height: 400 }}>
+        <Container style={{ height: 300 }}>
           <Row className="h-100">
             <Col className="align-self-center text-center">
               <h1 className="display-4 mb-4">Online Makeup Courses</h1>

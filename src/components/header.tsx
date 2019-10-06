@@ -11,7 +11,11 @@ import logoLight from '../images/qcma-logo-nav-light.svg';
 import { ScreenWidthContext } from '../contexts/screen-width';
 import { ScrollPositionContext } from '../contexts/scroll-position';
 
-export const Header = () => {
+interface Props {
+  className?: string;
+}
+
+export const Header: React.FC<Props> = ({ className }) => {
 
   const screenWidth = useContext(ScreenWidthContext);
   const scrollPosition = useContext(ScrollPositionContext);
@@ -26,7 +30,7 @@ export const Header = () => {
       variant={scrollPosition > 90 ? undefined : 'dark'}
       fixed="top"
       expand="lg"
-      className={mobileMenu && mobile ? 'opened' : 'closed'}
+      className={`flex-shrink-0 ${mobileMenu && mobile ? 'opened' : 'closed'} ${className}`}
     >
       {/* <Container> */}
         <Navbar.Brand href="/">

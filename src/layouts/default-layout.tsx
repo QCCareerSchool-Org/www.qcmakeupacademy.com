@@ -11,9 +11,13 @@ import { Index } from './index';
 
 export const DefaultLayout: React.FC = ({ children }) => (
   <Index>
-    <Header />
-    {children}
-    <Footer />
+    <div className="d-flex flex-column vh-100">
+      <Header className="flex-shrink-0" />
+      <main className="flex-shrink-0">
+        {children}
+      </main>
+      <Footer className="mt-auto" />
+    </div>
   </Index>
 );
 
