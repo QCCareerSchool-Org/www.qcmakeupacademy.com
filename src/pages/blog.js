@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import { FaRegClock } from "react-icons/fa"
 
 import { DefaultLayout } from "../layouts/default-layout"
-import PostIcons from "../components/post-icons"
+import { PostIcons } from "../components/post-icons"
 
 class Home extends Component {
   render() {
