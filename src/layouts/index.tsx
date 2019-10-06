@@ -1,37 +1,15 @@
 /**
  * This is the base layout that wraps all other layouts.
- * It includes global styles, like bootstrap and contains the state for screen width and scroll position
+ * It includes global styles, like bootstrap
  */
-import React, { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet';
+
+import PropTypes from 'prop-types';
+import React from 'react';
 
 import './index.scss';
 
-export const ScreenWidthContext = React.createContext<number>(0);
-export const ScrollPositionContext = React.createContext<number>(0);
+export const Index: React.FC = ({ children }) => <>{children}</>;
 
-export const Index: React.FC = ({ children }) => {
-  const [ screenWidth, setScreenWidth ] = useState<number>(0);
-  const [ scrollPosition, setScrollPosition ] = useState<number>(0);
-
-  useEffect(() => {
-    setScreenWidth(window.innerWidth);
-    setScrollPosition(window.scrollY);
-    const handleResize = () => setScreenWidth(window.innerWidth);
-    const handleScroll = () => setScrollPosition(window.scrollY);
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  return (
-    <ScreenWidthContext.Provider value={screenWidth}>
-      <ScrollPositionContext.Provider value={scrollPosition}>
-        {children}
-      </ScrollPositionContext.Provider>
-    </ScreenWidthContext.Provider>
-  );
+Index.propTypes = {
+  children: PropTypes.node.isRequired,
 };

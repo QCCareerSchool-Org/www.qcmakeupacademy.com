@@ -9,11 +9,7 @@ import { Footer } from '../components/footer';
 import { Header } from '../components/header';
 import { Index } from './index';
 
-interface Props {
-  children: React.ReactNode;
-}
-
-export const DefaultLayout: React.FC<Props> = ({ children }) => (
+export const DefaultLayout: React.FC = ({ children }) => (
   <Index>
     <Header />
     {children}
@@ -22,5 +18,5 @@ export const DefaultLayout: React.FC<Props> = ({ children }) => (
 );
 
 DefaultLayout.propTypes = {
-  children: PropTypes.object.isRequired,
+  children: PropTypes.node.isRequired,
 };

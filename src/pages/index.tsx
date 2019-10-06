@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React, { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
@@ -5,15 +6,21 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import { FaBeer } from 'react-icons/fa';
 
-import { Link } from 'gatsby';
 import { Background } from '../components/background';
-import { ScreenWidthContext } from '../layouts';
+import { ScreenWidthContext } from '../contexts/screen-width';
 import { DefaultLayout } from '../layouts/default-layout';
 
 const Index: React.FC = () => {
   const screenWidth = useContext(ScreenWidthContext);
 
-  const mobile = screenWidth < 992;
+  let tileHeight = 300;
+  if (screenWidth >= 1200) {
+    tileHeight = 350;
+  } else if (screenWidth >= 992) {
+    tileHeight = 290;
+  } else if (screenWidth >= 768) {
+    tileHeight = 210;
+  }
 
   return (
     <DefaultLayout>
@@ -29,12 +36,6 @@ const Index: React.FC = () => {
           </Container>
         </section>
       </Background>
-
-      <section className="bg-primary text-light">
-        <Container>
-          <p>Screen width is {screenWidth}</p>
-        </Container>
-      </section>
 
       <section>
         <Container>
@@ -54,7 +55,7 @@ const Index: React.FC = () => {
           <Row>
             <Col xs="12" md="4" className="mb-4 mb-md-0">
               <Background image="courses1" overlay={[ `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))` ]}>
-                <div style={{ height: 300 }} className="d-flex flex-column justify-content-center">
+                <div style={{ height: tileHeight }} className="d-flex flex-column justify-content-center">
                   <h3 className="text-shadow mb-3">Foundational<br />Training</h3>
                   <Button color="black" className="d-block align-self-center">VIEW COURSES</Button>
                 </div>
@@ -62,7 +63,7 @@ const Index: React.FC = () => {
             </Col>
             <Col xs="12" md="4" className="mb-4 mb-md-0">
               <Background image="courses3" overlay={[ `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))` ]}>
-                <div style={{ height: 300 }} className="d-flex flex-column justify-content-center">
+                <div style={{ height: tileHeight }} className="d-flex flex-column justify-content-center">
                   <h3 className="text-shadow mb-3">Advanced<br />Training</h3>
                   <Button color="black" className="d-block align-self-center">VIEW COURSES</Button>
                 </div>
@@ -70,7 +71,7 @@ const Index: React.FC = () => {
             </Col>
             <Col xs="12" md="4" className="mb-4 mb-md-0">
               <Background image="courses2" overlay={[ `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))` ]}>
-                <div style={{ height: 300 }} className="d-flex flex-column justify-content-center">
+                <div style={{ height: tileHeight }} className="d-flex flex-column justify-content-center">
                   <h3 className="text-shadow mb-3">Specialty<br />Training</h3>
                   <Button color="black" className="d-block align-self-center">VIEW COURSES</Button>
                 </div>
@@ -79,7 +80,6 @@ const Index: React.FC = () => {
           </Row>
         </Container>
       </section>
-
     </DefaultLayout>
   );
 };

@@ -5,3 +5,7 @@
  */
 
 // You can delete this file if you're not using it
+/**
+ * This is the base layout that wraps all other layouts.
+ * It includes global styles, like bootstrap and contains the state for screen width and scroll position
+ */

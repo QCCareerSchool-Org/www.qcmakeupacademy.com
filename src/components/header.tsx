@@ -7,7 +7,9 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 import logoDark from '../images/qcma-logo-nav-dark.svg';
 import logoLight from '../images/qcma-logo-nav-light.svg';
-import { ScreenWidthContext, ScrollPositionContext } from '../layouts';
+
+import { ScreenWidthContext } from '../contexts/screen-width';
+import { ScrollPositionContext } from '../contexts/scroll-position';
 
 export const Header = () => {
 

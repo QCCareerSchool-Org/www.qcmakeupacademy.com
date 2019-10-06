@@ -3,6 +3,18 @@
  *
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
+import React from 'react';
+
+import { ScreenWidthProvider } from './src/contexts/screen-width';
+import { ScrollPositionProvider } from './src/contexts/scroll-position';
+
+export const wrapRootElement = ({ element }) => (
+  <ScreenWidthProvider>
+    <ScrollPositionProvider>
+      {element}
+    </ScrollPositionProvider>
+  </ScreenWidthProvider>
+);
 
 export const onClientEntry = () => {
   // IntersectionObserver polyfill for gatsby-background-image (Safari, IE)
@@ -11,3 +23,4 @@ export const onClientEntry = () => {
     console.log(`# IntersectionObserver is polyfilled!`)
   }
 }
+
