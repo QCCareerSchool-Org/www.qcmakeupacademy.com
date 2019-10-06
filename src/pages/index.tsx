@@ -22,7 +22,7 @@ const Index: React.FC = () => {
     tileHeight = 210;
   }
 
-  const backgroundStyle: React.CSSProperties = screenWidth >= 992 ? { backgroundPosition: '50% 50%' } : { backgroundPosition: '100% 50%' };
+  const backgroundStyle: React.CSSProperties = screenWidth >= 992 ? { backgroundPosition: '100% 50%' } : { backgroundPosition: '80% 50%' };
 
   return (
     <DefaultLayout>
