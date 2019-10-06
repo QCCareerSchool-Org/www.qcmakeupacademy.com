@@ -1,25 +1,22 @@
-import { Link } from 'gatsby';
-import React, { useEffect, useState } from 'react';
-
+import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import FormControl from 'react-bootstrap/FormControl';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
+import logoDark from '../images/qcma-logo-nav-dark.svg';
+import logoLight from '../images/qcma-logo-nav-light.svg';
+import { ScreenWidthContext, ScrollPositionContext } from '../layouts';
+
 export const Header = () => {
 
-  const [ scrollPosition, setScrollPosition ] = useState<number>(0);
-  useEffect(() => {
-    setScrollPosition(window.scrollY);
-    const handleScroll = () => setScrollPosition(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  const screenWidth = useContext(ScreenWidthContext);
+  const scrollPosition = useContext(ScrollPositionContext);
+  const [ mobileMenu, setMobileMenu ] = useState(false);
+
+  const logo = scrollPosition > 90 ? logoDark : logoLight;
+  const mobile = screenWidth < 992;
 
   return (
     <Navbar
@@ -27,28 +24,35 @@ export const Header = () => {
       variant={scrollPosition > 90 ? undefined : 'dark'}
       fixed="top"
       expand="lg"
+      className={mobileMenu && mobile ? 'opened' : 'closed'}
     >
-      <Container>
-        <Navbar.Brand href="#home">QC Makeup Academy</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      {/* <Container> */}
+        <Navbar.Brand href="/">
+          <img src={logo} alt="QC Makeup Academy" style={{ display: 'block', height: 20 }}/>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => { setMobileMenu(m => !m); }} />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/online-makeup-courses/">Courses</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+            <NavDropdown title="COURSES" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/online-makeup-courses/">Overview</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+              <NavDropdown.Item href="/online-makeup-courses/master-makeup-artistry/">Master Makeup Artistry</NavDropdown.Item>
+              <NavDropdown.Item href="/online-makeup-courses/makeup-artisty/">Makeup Artistry</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="/online-makeup-courses/pro-makeup-workshop/">Pro Makeup Workshop</NavDropdown.Item>
+              <NavDropdown.Item href="/online-makeup-courses/special-fx-makeup/">Special FX Makeup</NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link href="/about/">ABOUT</Nav.Link>
+            <Nav.Link href="/about/">CONTACT</Nav.Link>
           </Nav>
-          <Form inline={true}>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-success">Search</Button>
-          </Form>
+          <a href="https://enroll.qcmakeupacademy.com">
+            {mobile
+              ? <Button variant="link" className="p-0">ENROLL ONLINE</Button>
+              : <Button>ENROLL ONLINE</Button>
+            }
+          </a>
         </Navbar.Collapse>
-      </Container>
+      {/* </Container> */}
     </Navbar>
   );
 };

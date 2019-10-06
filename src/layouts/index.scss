@@ -1,9 +1,13 @@
 $theme-colors: (
   "primary": #e70260,
+  "darker": #202020,
   "black": #000,
 );
 
 $headings-font-family: 'Playfair Display', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$navbar-dark-color: rgba(255,255,255,0.8);
+$navbar-dark-toggler-border-color: rgba(255,255,255,0.9);
 
 @import '~bootstrap/scss/bootstrap.scss';
 
@@ -30,5 +34,14 @@ ul.sm-indent, ol.sm-indent { padding-inline-start: 0rem; padding-left: 1.5rem; }
 
 
 .navbar {
-  transition: background-color 200ms linear;
+  transition: background-color 300ms;
+}
+
+.navbar-dark .navbar-toggler {
+  background-color: rgba(255,255,255,0.25)
+}
+
+
+.navbar-dark.opened {
+  background-color: rgba(0, 0, 0, 0.8)
 }
