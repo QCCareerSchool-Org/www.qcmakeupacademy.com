@@ -21,14 +21,16 @@ export const Header: React.FC<Props> = ({ className }) => {
   const scrollPosition = useContext(ScrollPositionContext);
   const [ mobileMenu, setMobileMenu ] = useState(false);
 
-  const logo = scrollPosition > 90 ? logoDark : logoLight;
+  const maxPosition = 20;
+
+  const logo = scrollPosition > maxPosition ? logoDark : logoLight;
   const mobile = screenWidth < 992;
 
   return (
     <Navbar
       id="main-nav"
-      bg={scrollPosition > 90 ? 'light' : undefined}
-      variant={scrollPosition > 90 ? undefined : 'dark'}
+      bg={scrollPosition > maxPosition ? 'light' : undefined}
+      variant={scrollPosition > maxPosition ? undefined : 'dark'}
       expand="lg"
       className={`${mobileMenu && mobile ? 'opened' : 'closed'} ${className}`}
     >

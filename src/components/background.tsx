@@ -14,6 +14,27 @@ export const Background: React.FC<Props> = ({ children, style, className, image,
   <StaticQuery
     query={graphql`
       query {
+        mz: file(relativePath: { eq: "backgrounds/mm-course-image.jpg" }) {
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 665) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        },
+        mk: file(relativePath: { eq: "backgrounds/ma-course-selection-1.jpg" }) {
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 665) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        },
+        topHeader3: file(relativePath: { eq: "backgrounds/top-header-3.jpg" }) {
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        },
         whyChoose: file(relativePath: { eq: "backgrounds/why-choose.jpg" }) {
           childImageSharp {
             fluid(quality: 90, maxWidth: 1920) {

@@ -47,7 +47,7 @@ const Index: React.FC = () => {
       <SEO title="Become a Professional Makeup Artist" />
 
       <Background image="headerImage1" style={backgroundStyle} className="bg-dark text-light">
-        <section>
+        <section id="first-section">
           <Container style={{ height: 400 }}>
             <Row className="h-100">
               <Col className="align-self-center text-center">

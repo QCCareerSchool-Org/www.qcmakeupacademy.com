@@ -1,4 +1,8 @@
-export const getTelephoneNumber = (countryCode?: string) => {
+import { IPricesResult } from '@qccareerschool/prices';
+
+export { IPricesResult as Price };
+
+export const getTelephoneNumber = (countryCode: string) => {
   if (countryCode === 'CA') {
     return '1-833-000-000';
   }

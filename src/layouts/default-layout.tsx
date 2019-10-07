@@ -7,7 +7,6 @@ import React from 'react';
 
 import { Footer } from '../components/footer';
 import { Header } from '../components/header';
-import { SecondLevelNav } from '../components/second-level-nav';
 import { Index } from './index';
 
 export const DefaultLayout: React.FC = ({ children }) => (
