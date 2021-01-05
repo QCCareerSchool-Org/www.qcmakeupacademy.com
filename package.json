@@ -6,7 +6,7 @@
   "author": "Dave Welsh <dave@qccareerschool.com>",
   "dependencies": {
     "@types/react-helmet": "^5.0.11",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "big.js": "^5.2.2",
     "bootstrap": "^4.3.1",
     "gatsby": "^2.15.29",
