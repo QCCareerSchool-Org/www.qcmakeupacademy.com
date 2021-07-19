@@ -22,7 +22,7 @@
     "gatsby-plugin-tslint": "0.0.2",
     "gatsby-plugin-typescript": "^2.1.11",
     "gatsby-source-filesystem": "^2.1.29",
-    "gatsby-source-wordpress": "^3.1.39",
+    "gatsby-source-wordpress": "^4.0.8",
     "gatsby-transformer-sharp": "^2.2.20",
     "intersection-observer": "^0.7.0",
     "node-sass": "^4.12.0",
