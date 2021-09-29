@@ -19,13 +19,9 @@
     "jsx": "preserve"
   },
   "include": [
-    "next-env.d.ts",
+    "**/*.js",
     "**/*.ts",
-    "**/*.tsx",
-    "__mocks__/**.js",
-    ".eslintrc.js",
-    "jest.config.js",
-    "jest.setup.js"
+    "**/*.tsx"
   ],
   "exclude": [
     "node_modules"
