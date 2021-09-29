@@ -1,3 +1,4 @@
+import '../styles/global.scss';
 import type { AppProps } from 'next/app';
 import { ReactElement } from 'react';
 
